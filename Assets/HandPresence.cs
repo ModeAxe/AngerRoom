@@ -6,8 +6,14 @@ public class HandPresence : MonoBehaviour
 {
     public List<GameObject> controllers;
     public InputDeviceCharacteristics controllerCharacteristics;
+    public bool showController = false;
+
     private InputDevice targetDevice;
+    public GameObject handModelPrefab;
+    private GameObject spawnedHandModel;
     private GameObject spawnedController;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -29,13 +35,26 @@ public class HandPresence : MonoBehaviour
                 //not found --switch to default controller
                 spawnedController = Instantiate(controllers[0], transform);
             }
+
+            spawnedHandModel = Instantiate(handModelPrefab, transform);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue);
+        //targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue);
+
+        if (showController)
+        {
+            spawnedHandModel.SetActive(false);
+            spawnedController.SetActive(true);
+        }
+        else
+        {
+            spawnedController.SetActive(false);
+            spawnedHandModel.SetActive(true);
+        }
 
 
         
