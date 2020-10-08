@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: d4ee6b4d8dea0ef4fab9a10be53ecc59
+guid: 9f3cd23cec1803f44b898d095ec53eab
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
+      74: 3737630296006697786
+    second: Field.001|EmptyAction
+  - first:
+      74: 2212915411664135672
+    second: Field.001|Field.001Action.001
+  - first:
       74: -5572541973309549404
     second: Empty|EmptyAction
+  - first:
+      74: 2924432176254963628
+    second: Empty|Field.001Action.001
   externalObjects: {}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
-    materialSearch: 1
+    materialSearch: 2
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
